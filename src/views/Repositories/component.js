@@ -1,47 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { Header, Icon } from 'react-native-elements';
-import { Text } from 'react-native';
+import React from 'react';
 
 import Empty from './Empty';
-import { startSearch as startSearchAction } from '../../state/concepts/search/actions';
+import Header from './Header';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class HomeScreen extends Component {
-  render() {
-    const { startSearch } = this.props;
+const Repositories = () => (
+  <>
+    <Header />
 
-    return (
-      <>
-        <Header
-          containerStyle={{
-            backgroundColor: 'white',
-            paddingHorizontal: 20,
-          }}
-          rightComponent={(
-            <Icon
-              name="plus"
-              type="octicon"
-              size={18}
-              onPress={startSearch}
-            />
-          )}
-          centerComponent={<Text>Github Stargather</Text>}
-        />
+    <Empty />
+  </>
+);
 
-        <Empty />
-      </>
-    );
-  }
-}
-
-HomeScreen.propTypes = {
-  startSearch: PropTypes.func.isRequired,
-};
-
-const mapDispatchToProps = {
-  startSearch: startSearchAction,
-};
-
-export default connect(null, mapDispatchToProps)(HomeScreen);
+export default Repositories;
