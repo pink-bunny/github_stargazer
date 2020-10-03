@@ -7,7 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import store from './src/state/store';
-import HomeScreen from './src/views/HomeScreen';
+import Repositories from './src/views/Repositories';
 
 const Stack = createStackNavigator();
 
@@ -17,11 +17,14 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
           <Stack.Screen
             name="Home"
-            component={HomeScreen}
-            options={{ title: 'Welcome' }}
+            component={Repositories}
           />
           <Stack.Screen name="Profile" component={ProfileScreen} />
         </Stack.Navigator>
