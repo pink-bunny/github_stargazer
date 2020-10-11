@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { Provider } from 'react-redux';
 
 import 'react-native-gesture-handler';
@@ -8,10 +7,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import store from './src/state/store';
 import Repositories from './src/views/Repositories';
+import AddRepository from './src/views/AddRepository';
 
 const Stack = createStackNavigator();
-
-const ProfileScreen = () => <Text>This is Jane profile</Text>;
 
 export default function App() {
   return (
@@ -26,7 +24,10 @@ export default function App() {
             name="Home"
             component={Repositories}
           />
-          <Stack.Screen name="Profile" component={ProfileScreen} />
+          <Stack.Screen
+            name="AddRepository"
+            component={AddRepository}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
