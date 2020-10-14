@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 
 import Header from '../shared/Header';
+import Form from './Form';
 
 const AddRepository = () => {
   const navigation = useNavigation();
@@ -23,9 +23,7 @@ const AddRepository = () => {
         )}
       />
 
-      <Text>
-        AddRepository
-      </Text>
+      <Form />
     </>
   );
 };
