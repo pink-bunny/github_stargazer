@@ -2,17 +2,20 @@ import { combineReducers } from 'redux';
 
 import * as types from './types';
 
-const startSearch = (state = null, action) => {
+const repositories = (state = [], action) => {
   switch (action.type) {
-    case types.START_SEARCH:
-      return 'HELLO START_SEARCH';
+    case types.SEARCH_REPOSITORY_SUCCESS:
+      return [
+        ...state,
+        action.repository,
+      ];
     default:
       return state;
   }
 };
 
-const sessionReducer = combineReducers({
-  startSearch,
+const repositoriesReducer = combineReducers({
+  repositories,
 });
 
-export default sessionReducer;
+export default repositoriesReducer;

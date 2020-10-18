@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button } from 'react-native-elements';
+import PropTypes from 'prop-types';
+import { Button, Icon } from 'react-native-elements';
 
-import { StyledView, StyledInput } from './styled';
+import * as S from './styled';
 
 const AddRepository = ({
   values,
@@ -10,20 +11,47 @@ const AddRepository = ({
   handleChange,
   handleBlur,
   handleSubmit,
+  isSubmitting,
 }) => (
-  <StyledView>
-    <StyledInput
-      placeholder="Type to search..."
-      onChangeText={handleChange('name')}
-      onBlur={handleBlur('name')}
-      value={values.name}
-    />
+  <S.StyledView>
+    <S.InputWrapper>
+      <S.StyledInput
+        placeholder="Type to search..."
+        onChangeText={handleChange('name')}
+        onBlur={handleBlur('name')}
+        value={values.name}
+      />
+      {touched.name && errors.name ? (
+        <S.StyledErrorMessage>
+          <Icon
+            name="alert"
+            type="octicon"
+            size={14}
+            iconStyle={{ color: 'red', marginRight: 8 }}
+          />
+          <S.StyledErrorMessageText>
+            {errors.name}
+          </S.StyledErrorMessageText>
+        </S.StyledErrorMessage>
+      ) : null}
+    </S.InputWrapper>
     <Button
       title="Add"
       type="outline"
+      loading={isSubmitting}
       onPress={handleSubmit}
     />
-  </StyledView>
+  </S.StyledView>
 );
+
+AddRepository.propTypes = {
+  values: PropTypes.shape().isRequired,
+  touched: PropTypes.shape().isRequired,
+  errors: PropTypes.shape().isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleBlur: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  isSubmitting: PropTypes.bool.isRequired,
+};
 
 export default AddRepository;

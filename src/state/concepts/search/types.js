@@ -1,4 +1,5 @@
 const namespace = 'search';
 
 // eslint-disable-next-line import/prefer-default-export
-export const START_SEARCH = `${namespace}/START_SEARCH `;
+export const SEARCH_REPOSITORY = `${namespace}/SEARCH_REPOSITORY `;
+export const SEARCH_REPOSITORY_SUCCESS = `${namespace}/SEARCH_REPOSITORY_SUCCESS `;

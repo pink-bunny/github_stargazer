@@ -1,7 +1,13 @@
 import * as types from './types';
 
-// eslint-disable-next-line import/prefer-default-export
-export const startSearch = () => ({
-  type: types.START_SEARCH,
+export const searchRepository = ({ value, setSubmitting, setErrors }) => ({
+  type: types.SEARCH_REPOSITORY,
+  value,
+  setSubmitting,
+  setErrors,
 });
 
+export const searchRepositorySuccess = (repository) => ({
+  type: types.SEARCH_REPOSITORY_SUCCESS,
+  repository,
+});
