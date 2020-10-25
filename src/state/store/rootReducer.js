@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import repositoriesReducer from '../concepts/search/reducer';
+import repositories from '../concepts/repository/reducer';
 
 export default combineReducers({
-  repositoriesReducer,
+  repositories,
 });

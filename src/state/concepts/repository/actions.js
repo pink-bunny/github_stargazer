@@ -1,10 +1,11 @@
 import * as types from './types';
 
-export const searchRepository = ({ value, setSubmitting, setErrors }) => ({
+export const searchRepository = ({ value, setSubmitting, setErrors, navigation }) => ({
   type: types.SEARCH_REPOSITORY,
   value,
   setSubmitting,
   setErrors,
+  navigation,
 });
 
 export const searchRepositorySuccess = (repository) => ({

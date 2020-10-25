@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 
 import * as types from './types';
 
-const repositories = (state = [], action) => {
+const list = (state = [], action) => {
   switch (action.type) {
     case types.SEARCH_REPOSITORY_SUCCESS:
       return [
@@ -14,8 +14,6 @@ const repositories = (state = [], action) => {
   }
 };
 
-const repositoriesReducer = combineReducers({
-  repositories,
+export default combineReducers({
+  list,
 });
-
-export default repositoriesReducer;

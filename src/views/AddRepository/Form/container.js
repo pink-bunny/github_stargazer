@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as Yup from 'yup';
 
 import FormComponent from './component';
-import { searchRepository as searchRepositoryAction } from '../../../state/concepts/search/actions';
+import { searchRepository as searchRepositoryAction } from '../../../state/concepts/repository/actions';
 
 const mapDispatchToProps = {
   searchRepository: searchRepositoryAction,
@@ -18,9 +18,13 @@ export default compose(
         .required('Required'),
     }),
     mapPropsToValues: () => ({ name: 'pink-bunny/github_stargazer' }),
-    handleSubmit: (values, { props: { searchRepository }, setSubmitting, setErrors }) => {
+    handleSubmit: (values, {
+      props: { searchRepository, navigation },
+      setSubmitting,
+      setErrors,
+    }) => {
       const value = values.name;
-      searchRepository({ value, setSubmitting, setErrors });
+      searchRepository({ value, setSubmitting, setErrors, navigation });
     },
     displayName: 'AddRepositoryForm',
   }),

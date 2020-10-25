@@ -1,5 +1,5 @@
-import { searchOperations } from './search';
+import { repositoryOperations } from './repository';
 
 export default [
-  ...searchOperations,
+  ...repositoryOperations,
 ];

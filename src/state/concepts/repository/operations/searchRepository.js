@@ -1,20 +1,20 @@
 import { createLogic } from 'redux-logic';
-import axios from 'axios';
 
 import * as types from '../types';
 import { searchRepositorySuccess } from '../actions';
 
-const searchRepo = createLogic({
+const searchRepository = createLogic({
   type: types.SEARCH_REPOSITORY,
   latest: true,
 
-  async process({ action }, dispatch, done) {
-    const { value, setSubmitting, setErrors } = action;
+  async process({ action, httpClient }, dispatch, done) {
+    const { value, setSubmitting, setErrors, navigation } = action;
 
     try {
-      const { data } = await axios.get(`https://api.github.com/repos/${value}`);
-      console.log('LOG: data', data);
+      const { data } = await httpClient.get(`/repos/${value}`);
+
       dispatch(searchRepositorySuccess(data));
+      navigation.goBack();
     } catch (error) {
       setErrors({
         name: `We couldn’t find any repositories matching "${value}"`,
@@ -26,4 +26,4 @@ const searchRepo = createLogic({
   },
 });
 
-export default searchRepo;
+export default searchRepository;
