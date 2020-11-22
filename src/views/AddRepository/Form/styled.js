@@ -2,21 +2,21 @@ import styled from 'styled-components/native';
 
 const StyledView = styled.View`
   flex-grow: 1;
-  paddingHorizontal: 20;
-  paddingVertical: 20;
+  padding: 20px;
 `;
 const InputWrapper = styled.View`
-  margin-bottom: 16;
+  margin-bottom: 16px;
 `;
 const StyledInput = styled.TextInput`
-  border-radius: 3;
+  border-radius: 3px;
   background-color: white;
   border-color: grey;
-  border-width: 1;
+  border-width: 1px;
   border-style: solid;
-  min-height: 42;
-  margin-bottom: 8;
-  paddingHorizontal: 8;
+  min-height: 42px;
+  margin-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
 `;
 const StyledErrorMessage = styled.View`
   display: flex;

@@ -11,6 +11,12 @@ const HeaderComponent = (props) => {
       containerStyle={{
         backgroundColor: 'white',
         paddingHorizontal: 10,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+        position: 'relative',
+        zIndex: 1,
       }}
       centerComponent={<Text>{centerTitle}</Text>}
       {...props}

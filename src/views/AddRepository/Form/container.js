@@ -17,7 +17,7 @@ export default compose(
       name: Yup.string()
         .required('Required'),
     }),
-    mapPropsToValues: () => ({ name: 'pink-bunny/github_stargazer' }),
+    mapPropsToValues: () => ({ name: 'kenwheeler/slick' }),
     handleSubmit: (values, {
       props: { searchRepository, navigation },
       setSubmitting,

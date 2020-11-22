@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import store from './src/state/store';
 import Repositories from './src/views/Repositories';
 import AddRepository from './src/views/AddRepository';
+import DetailedRepository from './src/views/DetailedRepository';
 
 const Stack = createStackNavigator();
 
@@ -27,6 +28,10 @@ export default function App() {
           <Stack.Screen
             name="AddRepository"
             component={AddRepository}
+          />
+          <Stack.Screen
+            name="DetailedRepository"
+            component={DetailedRepository}
           />
         </Stack.Navigator>
       </NavigationContainer>

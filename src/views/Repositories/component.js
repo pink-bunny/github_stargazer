@@ -1,11 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 
 import Header from '../shared/Header';
 import Empty from './Empty';
+import List from './List';
 
-const Repositories = () => {
+const Repositories = ({ repositories }) => {
   const navigation = useNavigation();
 
   return (
@@ -23,9 +25,17 @@ const Repositories = () => {
         )}
       />
 
-      <Empty />
+      {repositories.length > 0 ? <List repositories={repositories} /> : <Empty />}
     </>
   );
+};
+
+Repositories.defaultProps = {
+  repositories: null,
+};
+
+Repositories.propTypes = {
+  repositories: PropTypes.arrayOf(PropTypes.shape()),
 };
 
 export default Repositories;
