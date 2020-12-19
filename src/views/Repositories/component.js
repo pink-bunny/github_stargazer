@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from 'react-native-elements';
+import { Icon, Button } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 
 import Header from '../shared/Header';
@@ -15,12 +15,17 @@ const Repositories = ({ repositories }) => {
       <Header
         centerTitle="Github Stargather"
         rightComponent={(
-          <Icon
-            name="plus"
-            type="octicon"
-            size={18}
+          <Button
             onPress={() => navigation.navigate('AddRepository')}
-            containerStyle={{ padding: 15 }}
+            buttonStyle={{ padding: 12 }}
+            icon={(
+              <Icon
+                name="plus"
+                type="octicon"
+                size={18}
+              />
+            )}
+            type="clear"
           />
         )}
       />

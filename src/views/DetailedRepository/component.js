@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from 'react-native-elements';
+import { Icon, Button } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 
 import * as S from './styled';
@@ -21,12 +21,17 @@ const Repository = ({
       <Header
         centerTitle={fullData}
         leftComponent={(
-          <Icon
-            name="chevron-left"
-            type="octicon"
-            size={18}
+          <Button
             onPress={() => navigation.goBack()}
-            containerStyle={{ padding: 15 }}
+            buttonStyle={{ padding: 12 }}
+            icon={(
+              <Icon
+                name="chevron-left"
+                type="octicon"
+                size={18}
+              />
+            )}
+            type="clear"
           />
         )}
       />
