@@ -22,6 +22,7 @@ const Repository = ({
         centerTitle={fullData}
         leftComponent={(
           <Button
+            testID="ctaGoBack"
             onPress={() => navigation.goBack()}
             buttonStyle={{ padding: 12 }}
             icon={(
@@ -37,15 +38,15 @@ const Repository = ({
       />
 
       <S.ContentWrap>
-        <S.Title>Stats</S.Title>
-        <S.TextWrap>
+        <S.Title testID="detailedRepoStatsTitle">Stats</S.Title>
+        <S.TextWrap testID="detailedRepoStatsList">
           <S.Text>{`Watchers: ${stargazersCount}`}</S.Text>
           <S.Text>{`Stars: ${watchersCount}`}</S.Text>
           <S.Text>{`Forks: ${forksCount}`}</S.Text>
         </S.TextWrap>
 
-        <S.Title>Languages</S.Title>
-        <S.TextWrap>
+        <S.Title testID="detailedRepoLangTitle">Languages</S.Title>
+        <S.TextWrap testID="detailedRepoLangList">
           {languages && toPercent(languages).map((item) => <S.Text key={item[0]}>{`${item[0]}: ${item[1]}%`}</S.Text>)}
         </S.TextWrap>
       </S.ContentWrap>

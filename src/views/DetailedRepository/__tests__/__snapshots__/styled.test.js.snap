@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styles to match snapshot 1`] = `
+Object {
+  "ContentWrap": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "attrs": Array [],
+    "displayName": "Styled(View)",
+    "inlineStyle": InlineStyle {
+      "rules": Array [
+        "
+  padding: 20px 10px;
+",
+      ],
+    },
+    "render": [Function],
+    "shouldForwardProp": undefined,
+    "styledComponentId": "StyledNativeComponent",
+    "target": [Function],
+    "withComponent": [Function],
+  },
+  "Text": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "attrs": Array [],
+    "displayName": "Styled(Text)",
+    "inlineStyle": InlineStyle {
+      "rules": Array [
+        "
+  margin-bottom: 4px;
+  font-size: 14px;
+",
+      ],
+    },
+    "render": [Function],
+    "shouldForwardProp": undefined,
+    "styledComponentId": "StyledNativeComponent",
+    "target": [Function],
+    "withComponent": [Function],
+  },
+  "TextWrap": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "attrs": Array [],
+    "displayName": "Styled(View)",
+    "inlineStyle": InlineStyle {
+      "rules": Array [
+        "
+  margin-bottom: 12px;
+",
+      ],
+    },
+    "render": [Function],
+    "shouldForwardProp": undefined,
+    "styledComponentId": "StyledNativeComponent",
+    "target": [Function],
+    "withComponent": [Function],
+  },
+  "Title": Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "attrs": Array [],
+    "displayName": "Styled(Text)",
+    "inlineStyle": InlineStyle {
+      "rules": Array [
+        "
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-size: 16px;
+",
+      ],
+    },
+    "render": [Function],
+    "shouldForwardProp": undefined,
+    "styledComponentId": "StyledNativeComponent",
+    "target": [Function],
+    "withComponent": [Function],
+  },
+}
+`;

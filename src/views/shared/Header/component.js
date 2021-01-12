@@ -18,7 +18,7 @@ const HeaderComponent = (props) => {
         position: 'relative',
         zIndex: 1,
       }}
-      centerComponent={<Text>{centerTitle}</Text>}
+      centerComponent={<Text testID="headerTitle">{centerTitle}</Text>}
       {...props}
     />
   );

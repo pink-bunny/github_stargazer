@@ -16,6 +16,7 @@ const Repositories = ({ repositories }) => {
         centerTitle="Github Stargather"
         rightComponent={(
           <Button
+            testID="ctaAddRepository"
             onPress={() => navigation.navigate('AddRepository')}
             buttonStyle={{ padding: 12 }}
             icon={(
@@ -36,7 +37,7 @@ const Repositories = ({ repositories }) => {
 };
 
 Repositories.defaultProps = {
-  repositories: null,
+  repositories: [],
 };
 
 Repositories.propTypes = {

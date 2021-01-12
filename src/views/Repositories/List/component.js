@@ -9,9 +9,10 @@ const ListComponent = ({ repositories }) => {
   const navigation = useNavigation();
 
   return (
-    <View>
+    <View testID="repositories">
       {repositories.map((item) => (
         <TouchableWithoutFeedback
+          testID="repositoryItem"
           key={item.id}
           onPress={() => navigation.navigate('DetailedRepository', { fullData: item.fullData, id: item.id })}
         >

@@ -1,0 +1,269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailedRepository component. matches snapshot 1`] = `
+Array [
+  <View
+    centerTitle="kenwheeler/slick"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "white",
+        "borderBottomColor": "#f2f2f2",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "height": 64,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "paddingTop": 20,
+        "position": "relative",
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 8,
+        "zIndex": 1,
+      }
+    }
+    testID="headerContainer"
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "borderRadius": 3,
+            "overflow": "hidden",
+          }
+        }
+      >
+        <View
+          accessibilityRole="button"
+          accessibilityState={
+            Object {
+              "busy": false,
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="ctaGoBack"
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#2089dc",
+                "borderRadius": 3,
+                "borderWidth": 0,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "padding": 12,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+        }
+      }
+    >
+      <Text
+        testID="headerTitle"
+      >
+        kenwheeler/slick
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "paddingBottom": 20,
+          "paddingLeft": 10,
+          "paddingRight": 10,
+          "paddingTop": 20,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 16,
+            "fontWeight": "700",
+            "marginBottom": 16,
+          },
+        ]
+      }
+      testID="detailedRepoStatsTitle"
+    >
+      Stats
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "marginBottom": 12,
+          },
+        ]
+      }
+      testID="detailedRepoStatsList"
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "marginBottom": 4,
+            },
+          ]
+        }
+      >
+        Watchers: 26373
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "marginBottom": 4,
+            },
+          ]
+        }
+      >
+        Stars: 26373
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "marginBottom": 4,
+            },
+          ]
+        }
+      >
+        Forks: 5522
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 16,
+            "fontWeight": "700",
+            "marginBottom": 16,
+          },
+        ]
+      }
+      testID="detailedRepoLangTitle"
+    >
+      Languages
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "marginBottom": 12,
+          },
+        ]
+      }
+      testID="detailedRepoLangList"
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "marginBottom": 4,
+            },
+          ]
+        }
+      >
+        CSS: 14.9%
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "marginBottom": 4,
+            },
+          ]
+        }
+      >
+        HTML: 8.1%
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "marginBottom": 4,
+            },
+          ]
+        }
+      >
+        JavaScript: 77.0%
+      </Text>
+    </View>
+  </View>,
+]
+`;
