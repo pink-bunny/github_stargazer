@@ -1,18 +1,16 @@
 import React from 'react';
-import { Icon } from 'react-native-elements';
-import { Text } from 'react-native';
+import { Text, Image } from 'react-native';
 
 import * as S from './styled';
 
 const EmptyComponent = () => (
   <S.EmptyWrap testID="emptyView">
-    <Icon
-      name="octoface"
-      type="octicon"
-      size={28}
-      iconStyle={{ marginBottom: 16 }}
+    <Image
+      source={require('../../../assets/octocat.png')}
+      style={{ width: 188, height: 188 }}
     />
-    <Text testID="emptyViewText">
+
+    <Text testID="emptyViewText" style={{ fontStyle: 'italic' }}>
       No repositories added
     </Text>
   </S.EmptyWrap>

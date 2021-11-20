@@ -18,7 +18,18 @@ const HeaderComponent = (props) => {
         position: 'relative',
         zIndex: 1,
       }}
-      centerComponent={<Text testID="headerTitle">{centerTitle}</Text>}
+      centerContainerStyle={{
+        alignSelf: 'center',
+      }}
+      statusBarProps={{
+        backgroundColor: "white",
+        barStyle: "dark-content",
+      }}
+      centerComponent={(
+        <Text testID="headerTitle" style={{ fontSize: 18, fontWeight: 'bold' }}>
+          {centerTitle}
+        </Text>
+      )}
       {...props}
     />
   );

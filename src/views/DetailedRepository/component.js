@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Image } from 'react-native';
 import { Icon, Button } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 
@@ -13,6 +14,7 @@ const Repository = ({
   watchersCount,
   forksCount,
   languages,
+  owner: { avatarUrl },
 }) => {
   const navigation = useNavigation();
 
@@ -38,6 +40,10 @@ const Repository = ({
       />
 
       <S.ContentWrap>
+        <Image
+          source={{uri: avatarUrl}}
+          style={{width: 200, height: 200}}
+        />
         <S.Title testID="detailedRepoStatsTitle">Stats</S.Title>
         <S.TextWrap testID="detailedRepoStatsList">
           <S.Text>{`Watchers: ${stargazersCount}`}</S.Text>

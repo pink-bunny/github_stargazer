@@ -28,6 +28,11 @@ const searchRepository = createLogic({
           stargazersCount: data.stargazers_count,
           watchersCount: data.watchers_count,
           forksCount: data.forks_count,
+          owner: {
+            url: data.owner.url,
+            avatarUrl: data.owner.avatar_url,
+            reposUrl: data.owner.repos_url,
+          }
         };
 
         dispatch(setSearchRequest(value));
