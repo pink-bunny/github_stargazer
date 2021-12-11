@@ -20,6 +20,7 @@ const AddRepository = ({
         onChangeText={handleChange('name')}
         onBlur={handleBlur('name')}
         value={values.name}
+        isError={touched.name && errors.name}
       />
       {touched.name && errors.name ? (
         <S.StyledErrorMessage>

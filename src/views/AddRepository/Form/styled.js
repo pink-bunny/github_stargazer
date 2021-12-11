@@ -10,7 +10,7 @@ const InputWrapper = styled.View`
 const StyledInput = styled.TextInput`
   border-radius: 3px;
   background-color: white;
-  border-color: grey;
+  border-color: ${({ isError }) => isError ? 'red' : 'grey'};
   border-width: 1px;
   border-style: solid;
   min-height: 42px;
