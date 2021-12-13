@@ -5,18 +5,18 @@ const StyledView = styled.View`
   padding: 20px;
 `;
 const InputWrapper = styled.View`
-  margin-bottom: 16px;
+  margin-bottom: 16;
 `;
 const StyledInput = styled.TextInput`
-  border-radius: 3px;
+  border-radius: 3;
   background-color: white;
   border-color: ${({ isError }) => isError ? 'red' : 'grey'};
-  border-width: 1px;
+  border-width: 1;
   border-style: solid;
-  min-height: 42px;
-  margin-bottom: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
+  min-height: 42;
+  margin-bottom: 8;
+  padding-left: 8;
+  padding-right: 8;
 `;
 const StyledErrorMessage = styled.View`
   display: flex;

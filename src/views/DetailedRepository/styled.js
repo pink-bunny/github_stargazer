@@ -6,17 +6,17 @@ const ContentWrap = styled.View`
 
 const Title = styled.Text`
   font-weight: 700;
-  margin-bottom: 16px;
-  font-size: 16px;
+  margin-bottom: 16;
+  font-size: 16;
 `;
 
 const TextWrap = styled.View`
-  margin-bottom: 12px;
+  margin-bottom: 12;
 `;
 
 const Text = styled.Text`
-  margin-bottom: 4px;
-  font-size: 14px;
+  margin-bottom: 4;
+  font-size: 14;
 `;
 
 export {
