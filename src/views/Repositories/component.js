@@ -31,7 +31,7 @@ const Repositories = ({ repositories }) => {
         )}
       />
 
-      {repositories.length > 0 ? <List repositories={repositories} /> : <Empty />}
+      <List repositories={repositories} />
     </>
   );
 };

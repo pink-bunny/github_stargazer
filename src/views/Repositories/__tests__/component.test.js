@@ -19,16 +19,6 @@ describe('Repositories component.', () => {
     expect(mockNavigate).toHaveBeenCalledWith('AddRepository');
   });
 
-  it('Empty screen', () => {
-    const { queryByTestId, toJSON } = render(<Repositories />);
-
-    expect(queryByTestId('emptyView')).toBeEnabled();
-    expect(queryByTestId('emptyViewText')).toHaveTextContent('No repositories added');
-    expect(toJSON()).toMatchSnapshot();
-
-    expect(queryByTestId('repositories')).toBeNull();
-  });
-
   it('Repositories screen', () => {
     const props = {
       repositories: [{ id: 0 }, { id: 1 }],

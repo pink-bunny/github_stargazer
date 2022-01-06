@@ -39,10 +39,10 @@ const Repository = ({
         )}
       />
 
-      <S.ContentWrap>
+      <S.ContentWrap scrollIndicatorInsets={{ right: 1 }}>
         <Image
           source={{uri: avatarUrl}}
-          style={{width: 200, height: 200}}
+          style={{width: 300, height: 300, marginBottom: 48}}
         />
         <S.Title testID="detailedRepoStatsTitle">Stats</S.Title>
         <S.TextWrap testID="detailedRepoStatsList">
