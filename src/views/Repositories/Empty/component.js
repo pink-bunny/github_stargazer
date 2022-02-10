@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Image } from 'react-native';
+import { Text, Image, Platform } from 'react-native';
 
 import * as S from './styled';
 
@@ -10,8 +10,15 @@ const EmptyComponent = () => (
       style={{ width: 188, height: 188 }}
     />
 
+    <Text testID="emptyViewText" style={{ fontStyle: 'italic', marginBottom: 5, fontWeight: 'bold' }}>
+      {Platform.select({
+        ios: 'Hello ios!',
+        android: 'Hi android!',
+        default: 'Yello stranger!',
+      })}
+    </Text>
     <Text testID="emptyViewText" style={{ fontStyle: 'italic' }}>
-      No repositories added
+      Sorry, but there are no repositories
     </Text>
   </S.EmptyWrap>
 );

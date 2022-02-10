@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text, TouchableWithoutFeedback, FlatList, SafeAreaView } from 'react-native';
+import { Text, TouchableWithoutFeedback, FlatList, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import Empty from '../Empty';
