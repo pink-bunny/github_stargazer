@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Text, ScrollView } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { Button, Icon } from 'react-native-elements';
 
 import * as S from './styled';
@@ -13,36 +15,39 @@ const AddRepository = ({
   handleSubmit,
   isSubmitting,
 }) => (
-  <S.StyledView>
-    <S.InputWrapper>
-      <S.StyledInput
-        placeholder="Type to search..."
-        onChangeText={handleChange('name')}
-        onBlur={handleBlur('name')}
-        value={values.name}
-        isError={touched.name && errors.name}
+  <KeyboardAwareScrollView>
+    <S.StyledView>
+      <S.InputWrapper>
+        <S.StyledInput
+          autoFocus
+          placeholder="Type to search..."
+          onChangeText={handleChange('name')}
+          onBlur={handleBlur('name')}
+          value={values.name}
+          isError={touched.name && errors.name}
+        />
+        {touched.name && errors.name ? (
+          <S.StyledErrorMessage>
+            <Icon
+              name="alert"
+              type="octicon"
+              size={14}
+              iconStyle={{ color: 'red', marginRight: 8 }}
+            />
+            <S.StyledErrorMessageText>
+              {errors.name}
+            </S.StyledErrorMessageText>
+          </S.StyledErrorMessage>
+        ) : null}
+      </S.InputWrapper>
+      <Button
+        title="Add"
+        type="outline"
+        loading={isSubmitting}
+        onPress={handleSubmit}
       />
-      {touched.name && errors.name ? (
-        <S.StyledErrorMessage>
-          <Icon
-            name="alert"
-            type="octicon"
-            size={14}
-            iconStyle={{ color: 'red', marginRight: 8 }}
-          />
-          <S.StyledErrorMessageText>
-            {errors.name}
-          </S.StyledErrorMessageText>
-        </S.StyledErrorMessage>
-      ) : null}
-    </S.InputWrapper>
-    <Button
-      title="Add"
-      type="outline"
-      loading={isSubmitting}
-      onPress={handleSubmit}
-    />
-  </S.StyledView>
+    </S.StyledView>
+  </KeyboardAwareScrollView>
 );
 
 AddRepository.propTypes = {
