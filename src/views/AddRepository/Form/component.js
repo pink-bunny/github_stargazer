@@ -35,17 +35,12 @@ const AddRepository = ({
               iconStyle={{ color: 'red', marginRight: 8 }}
             />
             <S.StyledErrorMessageText>
-              {errors.name}
+              {errors.name}    
             </S.StyledErrorMessageText>
           </S.StyledErrorMessage>
         ) : null}
       </S.InputWrapper>
-      <Button
-        title="Add"
-        type="outline"
-        loading={isSubmitting}
-        onPress={handleSubmit}
-      />
+
     </S.StyledView>
   </KeyboardAwareScrollView>
 );
